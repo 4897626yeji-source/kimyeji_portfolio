@@ -693,30 +693,49 @@ html, body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .app-container {
-    padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+    padding: 16px 16px 14px 16px;
     min-height: 100vh;
-  }
-
-  .main-content {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    margin: 1.75rem 0 2rem 0;
-    gap: 1.75rem;
+    justify-content: space-between;
   }
 
-  /* Clean, highly uniform vertical navigation for mobile */
+  .top-header-minimal {
+    margin-bottom: 6px;
+  }
+
+  .brand-logo {
+    font-size: 0.90rem;
+  }
+
+  /* Side-by-side balanced composition: Menu on Left, Gallery on Right! */
+  .main-content {
+    display: grid;
+    grid-template-columns: minmax(130px, 38%) 1fr;
+    grid-template-areas:
+      "nav gallery"
+      "info info";
+    column-gap: 14px;
+    row-gap: 12px;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    flex: 1;
+  }
+
+  /* Left Category Navigation */
   .category-nav {
+    grid-area: nav;
     width: 100%;
-    padding-top: 0;
+    padding-top: 2px;
   }
 
   .category-nav-list {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 1px;
     width: 100%;
   }
 
@@ -725,78 +744,143 @@ html, body {
   }
 
   .category-item.group-header {
-    margin-top: 14px;
-    margin-bottom: 3px;
+    margin-top: 7px;
+    margin-bottom: 1px;
   }
 
   .category-link.group-title-link {
-    font-size: 0.98rem;
+    font-size: 0.78rem;
     font-weight: 650;
     letter-spacing: -0.015em;
   }
 
   .category-item.sub-item {
-    padding-left: 12px;
+    padding-left: 7px;
   }
 
   .category-link {
-    font-size: 0.92rem;
-    padding: 3px 0;
-    line-height: 1.5;
-    display: inline-block;
+    font-size: 0.76rem;
+    padding: 2px 0;
+    line-height: 1.38;
+    letter-spacing: -0.015em;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  /* Middle info zone on mobile */
-  .middle-info-zone {
+  .category-item.sub-item .category-link {
+    font-size: 0.72rem;
+  }
+
+  /* Right Gallery Section: Compact 2-column matrix visible at a glance */
+  .gallery-section {
+    grid-area: gallery;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
     width: 100%;
     max-width: 100%;
-    padding-top: 0;
+  }
+
+  .gallery-card {
+    aspect-ratio: 16 / 10;
+    border-radius: 1px;
+  }
+
+  .card-caption {
+    opacity: 0.95;
+    transform: translateY(0);
+    font-size: 0.58rem;
+    padding: 3px 5px;
+    line-height: 1.15;
+  }
+
+  /* Additional Credits Panel inside right area */
+  .credits-panel {
+    max-width: 100%;
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+
+  .credit-title {
+    font-size: 0.76rem;
+    line-height: 1.35;
+  }
+
+  .credit-desc {
+    font-size: 0.68rem;
+    line-height: 1.35;
+  }
+
+  .credits-item {
+    padding-bottom: 8px;
+  }
+
+  /* Middle Project Description Card (Spans full width underneath when selected) */
+  .middle-info-zone {
+    grid-area: info;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 4px;
   }
 
   .project-description-card {
     max-height: none;
     overflow-y: visible;
-    padding: 1.25rem 0;
+    padding: 10px 0 6px 0;
     border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
   }
 
-  /* Gallery section on mobile */
-  .gallery-section {
-    width: 100%;
-    justify-content: stretch;
+  .project-desc-header {
+    margin-bottom: 4px;
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
-    width: 100%;
-    gap: 10px;
+  .project-tag {
+    font-size: 0.68rem;
   }
 
-  /* Mobile caption always gently visible at bottom of card */
-  .card-caption {
-    opacity: 0.92;
-    transform: translateY(0);
+  .project-year {
     font-size: 0.72rem;
-    padding: 6px 8px;
   }
 
-  /* Additional credits panel on mobile */
-  .credits-panel {
-    max-width: 100%;
-    max-height: none;
-    overflow-y: visible;
-    padding-right: 0;
+  .project-desc-title {
+    font-size: 0.94rem;
+    margin-bottom: 4px;
   }
 
-  /* Bottom footer layout on mobile */
+  .project-desc-body {
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .project-desc-link-wrap {
+    margin-top: 10px;
+    padding-top: 8px;
+  }
+
+  .project-link-btn {
+    font-size: 0.78rem;
+  }
+
+  .project-link-note {
+    font-size: 0.68rem;
+  }
+
+  /* Bottom Footer: Compact and balanced */
   .bottom-footer {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 1.25rem;
-    padding-top: 1rem;
+    gap: 10px;
+    padding-top: 8px;
     border-top: 1px solid var(--border-color);
   }
 
@@ -805,10 +889,11 @@ html, body {
   }
 
   .bottom-headline {
-    font-size: clamp(2.4rem, 11vw, 4rem);
-    line-height: 0.92;
-    letter-spacing: -0.035em;
+    font-size: clamp(2.2rem, 9.5vw, 3.2rem);
+    line-height: 0.88;
+    letter-spacing: -0.04em;
     word-break: keep-all;
+    margin-bottom: 0;
   }
 
   .bottom-right-container {
@@ -816,22 +901,36 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 16px;
+    gap: 12px;
   }
 
   .contact-info-panel {
     align-items: flex-start;
     padding-bottom: 0;
+    gap: 1px;
+  }
+
+  .contact-link {
+    font-size: 0.76rem;
+    line-height: 1.35;
+  }
+
+  .page-indicators {
+    padding-bottom: 2px;
   }
 }
 
-@media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+@media (max-width: 360px) {
+  .main-content {
+    grid-template-columns: minmax(115px, 42%) 1fr;
+    column-gap: 10px;
   }
 
-  .bottom-headline {
-    font-size: clamp(2.2rem, 12vw, 3.4rem);
+  .category-link {
+    font-size: 0.70rem;
+  }
+
+  .gallery-grid {
+    gap: 5px;
   }
 }
