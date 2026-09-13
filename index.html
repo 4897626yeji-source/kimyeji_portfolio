@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Edition</title>
+  
+  <!-- Fonts: Pretendard & Inter for clean editorial typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <!-- Main Style -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Left Brand / Return to Main -->
+    <header class="top-header-minimal">
+      <a href="#" class="brand-logo" id="brandLogo" aria-label="Go to main page">KIM YEJI</a>
+    </header>
+
+    <!-- Main Content Area: Left Menu + Center Whitespace + Right Gallery Matrix -->
+    <main class="main-content">
+      <!-- Left Category Navigation -->
+      <nav class="category-nav" aria-label="Category Navigation">
+        <ul class="category-nav-list">
+          <li class="category-item active" data-title="Home" data-filter="all">
+            <a href="#" class="category-link">Home</a>
+          </li>
+
+          <!-- Category 1: Media Server & Visual -->
+          <li class="category-item group-header" data-title="Media Server & Visual" data-filter="group:visual">
+            <a href="#" class="category-link group-title-link">Media Server & Visual</a>
+          </li>
+          <li class="category-item sub-item" data-title="BTS*SPOTIFY MV" data-filter="bts">
+            <a href="#" class="category-link">BTS*SPOTIFY MV</a>
+          </li>
+          <li class="category-item sub-item" data-title="Lil Moshpit MV" data-filter="lilmoshpit">
+            <a href="#" class="category-link">Lil Moshpit MV</a>
+          </li>
+          <li class="category-item sub-item" data-title="Personal Decoder" data-filter="decoder">
+            <a href="#" class="category-link">Personal Decoder</a>
+          </li>
+          <li class="category-item sub-item" data-title="ROMAN" data-filter="roman">
+            <a href="#" class="category-link">ROMAN</a>
+          </li>
+
+          <!-- Category 2: Sound -->
+          <li class="category-item group-header" data-title="Sound" data-filter="group:sound">
+            <a href="#" class="category-link group-title-link">Sound</a>
+          </li>
+          <li class="category-item sub-item" data-title="GM cave" data-filter="gmcave">
+            <a href="#" class="category-link">GM cave</a>
+          </li>
+          <li class="category-item sub-item" data-title="TORQUE" data-filter="torque">
+            <a href="#" class="category-link">TORQUE</a>
+          </li>
+
+          <!-- Additional Information & Contact -->
+          <li class="category-item" data-title="Additional Credits" data-filter="credits">
+            <a href="#" class="category-link">Additional Credits</a>
+          </li>
+          <li class="category-item" data-title="Contact" data-filter="contact">
+            <a href="#" class="category-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Center Information Zone (Displays description on project selection) -->
+      <aside class="middle-info-zone" id="middleInfoZone" aria-label="Project Information">
+        <article class="project-description-card" id="projectDescCard" aria-live="polite">
+          <div class="project-desc-header">
+            <span class="project-tag" id="projectTag">Media Server & Visual</span>
+            <span class="project-year" id="projectYear">May 2026</span>
+          </div>
+          <h2 class="project-desc-title" id="projectDescTitle">BTS*SPOTIFY MV 'Merry Go Round'</h2>
+          <div class="project-desc-role" id="projectDescRole" style="display: none;"></div>
+          <div class="project-desc-body" id="projectDescBody">
+            <p style='font-weight: 600; color: #111; margin-bottom: 3px;'>Visual Designer</p>
+            <p style='color: #444; line-height: 1.55;'>Post-production Effects Designer for a music video, designing motion trail effects</p>
+          </div>
+          <div class="project-desc-link-wrap" id="projectLinkWrap" style="display: none;">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="projectLinkBtn">
+              <span id="projectLinkLabel">Watch on Spotify</span>
+              <span class="link-arrow">↗</span>
+            </a>
+            <p class="project-link-note" id="projectLinkNote"></p>
+          </div>
+        </article>
+      </aside>
+
+      <!-- Right 4-Column Gallery Matrix & Additional Credits Section -->
+      <section class="gallery-section" aria-label="Work Gallery">
+        <div class="gallery-grid" id="galleryGrid">
+          
+          <!-- Media Server & Visual Projects (Row 1: 4 cards) -->
+          <div class="gallery-card" data-category="bts" data-group="visual">
+            <img src="portfolio image/BTS*SPOTIFY MV 'Merry Go Round'/스크린샷 2026-09-11 오후 4.07.03.png" alt="BTS*SPOTIFY MV 'Merry Go Round'">
+            <div class="card-caption">BTS*SPOTIFY MV 'Merry Go Round'</div>
+          </div>
+
+          <div class="gallery-card" data-category="lilmoshpit" data-group="visual">
+            <img src="portfolio image/Lil Moshpit X Jay Park MV 'GOAT'/스크린샷 2026-09-11 오후 4.16.35.png" alt="Lil Moshpit X Jay Park MV 'GOAT'">
+            <div class="card-caption">Lil Moshpit X Jay Park MV 'GOAT'</div>
+          </div>
+
+          <div class="gallery-card" data-category="decoder" data-group="visual">
+            <img src="portfolio image/Personal Decoder/스크린샷 2026-09-11 오후 4.25.09.png" alt="Personal Decoder">
+            <div class="card-caption">Personal Decoder</div>
+          </div>
+
+          <div class="gallery-card" data-category="roman" data-group="visual">
+            <img src="portfolio image/ROMAN/KakaoTalk_Image_2025-10-31-22-01-09_001 (1).jpeg" alt="ROMAN">
+            <div class="card-caption">ROMAN</div>
+          </div>
+
+          <!-- Sound Projects (Row 2: 2 cards) -->
+          <div class="gallery-card" data-category="gmcave" data-group="sound">
+            <img src="portfolio image/GM cave 'Dark immersive meditation'/스크린샷 2026-09-11 오후 4.22.48.png" alt="GM cave 'Dark immersive meditation'">
+            <div class="card-caption">GM cave 'Dark immersive meditation'</div>
+          </div>
+
+          <div class="gallery-card" data-category="torque" data-group="sound">
+            <img src="portfolio image/TORQUE/스크린샷 2026-09-11 오후 4.18.55.png" alt="TORQUE">
+            <div class="card-caption">TORQUE</div>
+          </div>
+
+        </div>
+
+        <!-- Additional Credits Content Panel (Visible when Additional Credits is active) -->
+        <div class="credits-panel" id="creditsPanel">
+          <div class="credits-content">
+            <!-- 2026 -->
+            <div class="credits-item">
+              <div class="credit-title">‘undefined_letpreartist’ exhibition 2026 sound director</div>
+              <div class="credit-desc">Soundtrack composing/mixing/mastering/sound design</div>
+            </div>
+
+            <!-- 2025 -->
+            <div class="credits-item">
+              <div class="credit-title">‘Generative techno 2025’ Audio visual designer</div>
+              <div class="credit-desc">audio visual design/live VJ performance</div>
+            </div>
+            <div class="credits-item">
+              <div class="credit-title">‘Twin pluses- 2025’ VJ performer</div>
+              <div class="credit-desc">audio visual design/live VJ performance</div>
+            </div>
+            <div class="credits-item">
+              <div class="credit-title">dance performance ‘Pulse- 2025’ stage director</div>
+              <div class="credit-desc">API data receiving backend setup/stage visual design/audio visual design</div>
+            </div>
+
+            <!-- 2024 -->
+            <div class="credits-item">
+              <div class="credit-title">Hongik University visual clip‘The bound 2024’ general music director</div>
+              <div class="credit-desc">composing/mixing/mastering/sound design/SFX</div>
+            </div>
+            <div class="credits-item">
+              <div class="credit-title">dance performance ‘Eclipse 2024’ stage director</div>
+              <div class="credit-desc">visual mapping/ stage visual design</div>
+            </div>
+            <div class="credits-item">
+              <div class="credit-title">'Eurorack dive' performance 2024 team.Apocalypse 3 visual designer</div>
+              <div class="credit-desc">audio visual design</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Section: Oversized Headline & Directional Arrow Indicators / Contact Info -->
+    <footer class="bottom-footer">
+      <div class="bottom-headline-wrap">
+        <h1 class="bottom-headline" id="bottomHeadline">Home</h1>
+      </div>
+
+      <!-- Right Bottom Area: Contact Info & Arrow Controls -->
+      <div class="bottom-right-container">
+        <!-- Contact Information (Visible when Contact is active) -->
+        <div class="contact-info-panel" id="contactInfoPanel" aria-live="polite">
+          <p class="contact-item"><a href="tel:+821088395268" class="contact-link">+82.10.8839.5268</a></p>
+          <p class="contact-item"><a href="mailto:4897626@naver.com" class="contact-link">4897626@naver.com</a></p>
+          <p class="contact-item"><a href="https://instagram.com/imyejidot" target="_blank" rel="noopener noreferrer" class="contact-link">@imyejidot</a></p>
+        </div>
+
+        <!-- Arrow Controls (Matching Reference's light up & indigo down arrows) -->
+        <div class="page-indicators" aria-label="Page Navigation">
+          <button class="arrow-btn up" id="arrowUp" title="Previous Item" aria-label="Previous">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="5.5,0 11,9 0,9" />
+            </svg>
+          </button>
+          <button class="arrow-btn down" id="arrowDown" title="Next Item" aria-label="Next">
+            <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="5.5,9 0,0 11,0" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Fullscreen Modal / Lightbox for Image Zoom -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-hidden="true">
+    <button class="lightbox-close-btn" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-image" id="lightboxImage">
+      <div class="lightbox-info" id="lightboxInfo"></div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
