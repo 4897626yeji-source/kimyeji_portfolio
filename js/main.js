@@ -39,9 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "BTS*SPOTIFY MV 'Merry Go Round'",
       role: '',
       description: "<p style='font-weight: 600; color: #111; margin-bottom: 3px;'>Visual Designer</p><p style='color: #444; line-height: 1.55;'>Post-production Effects Designer for a music video, designing motion trail effects</p>",
-      link: 'https://open.spotify.com/track/6t4JEAfgl8oVJUASyxzptH?si=d9a0f51b1bbb49d4',
-      linkLabel: 'Watch on Spotify',
-      linkNote: 'This music video was released exclusively for Spotify users and can be viewed in the Spotify app.'
+      link: 'https://www.youtube.com/watch?v=eJXL4-4m5nY',
+      linkLabel: 'Watch on YouTube'
     },
     lilmoshpit: {
       tag: 'Media Server & Visual',
